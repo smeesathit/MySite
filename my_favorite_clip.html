@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My Favorite Clip</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Adding favicon with link tag -->	
+		<link rel="icon" type="image/png" sizes="24x24" href="favicon.png"/>
+
+		<!-- Link to external style sheet -->
+
+		<style type="text/css">
+			.flex-container {
+			    display: -webkit-flex;
+			    display: flex;  
+			    -webkit-flex-flow: row wrap;
+			    flex-flow: row wrap;
+			    text-align: center;
+			}
+
+			.flex-container > * {
+			    padding: 15px;
+			    -webkit-flex: 1 100%;
+			    flex: 1 100%;
+			}
+
+			.article {
+			    text-align: left;
+			}
+
+			header {background-color: #0081cb;color:white; text-align: left; text-align: center;}
+			footer {background-color: #00b0ff;color:black;}
+
+			.nav {background-color: #69e2ff;}
+
+			.nav ul {
+			    list-style-type: none;
+			    padding: 10px;
+			    margin: 0;
+			}
+			.nav li a {
+			    text-decoration: none;
+			    display: block;
+			    background: #cce5ff;
+			    color: #000;
+			    padding: 8px 16px;
+			}
+
+			/* Change the link color on hover */
+			.nav li a:hover {
+			    background-color: #555;
+			    color: white;
+			}
+			@media all and (min-width: 768px) {
+			    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+			    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+			    footer {-webkit-order:3;order:3;}
+			}
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="flex-container">
+			<!-- Page's header -->
+			<header>
+  				<h1>เว็บส่วนตัวของฉัน</h1>
+			</header>
+
+			<!-- Main menu on the left -->
+			<nav class="nav">
+				<ul >
+					<li><a href="index.html">หน้าหลัก</a></li>
+					<li><a href="my_info.html">ข้อมูลของฉัน</a></li>
+					<li><a href="my_favorite_song.html">เพลงโปรด</a></li>
+					<li><a href="my_favorite_clip.html">คลิปโปรด</a></li>
+					<li><a href="my_javascript_sample.html">จาวาสคริปต์โปรด</a></li>
+
+				</ul>
+			</nav>
+			
+			<!-- Page's content-->
+			<article class="article">
+				<h2>Space Cats — Magic Fly by <a href="https://www.youtube.com/channel/UCnCZFLz-8IY4eZBxJDjKHSw" target="_blank" >Enjoyker</a></h2> 
+
+				<video id="video1" width="420" height="340" controls>
+	  				<source src="videos/space_cats.mp4" type="video/mp4">
+	  				บราวเซอร์นี้ไม่รองรับ video tag	
+				</video>
+				<br><br>
+				<button onclick="makeBig()">ขยาย</button>
+				<button onclick="makeSmall()">ย่อ</button>
+				<button onclick="makeNormal()">ปกติ</button>
+			</article>
+
+			<!-- Page's footer-->
+			<footer>Copyright &copy; Dr.Sooksathit Meesathit</footer>
+
+		</div>
+
+		<!-- JavaScript in body element -->
+		<script> 
+			var myVideo = document.getElementById("video1"); 
+
+			function makeBig() { 
+		   
+		        myVideo.width = 520; 
+			    myVideo.height = 440;
+			} 
+
+			function makeSmall() { 
+			    myVideo.width = 320; 
+			    myVideo.height = 240;
+			} 
+
+			function makeNormal() { 
+			    myVideo.width = 420; 
+			    myVideo.height = 340;
+			} 
+		</script> 
+
+	</body>
+</html>
