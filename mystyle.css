@@ -35,15 +35,17 @@
 			    padding: 8px 16px;
 			}
 
-			#center {
-				text-align: center;
-			}
-
 			/* Change the link color on hover */
 			.nav li a:hover {
 			    background-color: #555;
 			    color: white;
 			}
+
+
+			#center {
+				text-align: center;
+			}
+
 			@media all and (min-width: 768px) {
 			    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
 			    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
